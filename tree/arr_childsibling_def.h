@@ -1,14 +1,8 @@
 
 
-typedef struct
+typedef struct CSibNode
 {
   int data;
-  int firstchild;
-  int rightsib;
-} SIBNode;
-
-typedef struct
-{
-  SIBNode nodes[100];
-  int r, n;
-} CTree;
+  struct CSibNode *firstchild;
+  struct CSibNode *rightsib;
+} CSibNode, *CTree;
